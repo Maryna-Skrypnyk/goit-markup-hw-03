@@ -27,6 +27,7 @@
   --secondary-font-weight: 500;
   --title-font-weight: 700;
   --hero-title-font-weight: 900;
+  --border-project-color: #eeeeee;
 }
 
 body {
@@ -39,9 +40,27 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 94px;
+
+  width: 1200px;
+  outline: 2px solid tomato;
+}
+
+.container.header,
+.container.footer,
+.container.team {
+  margin-bottom: 0;
+}
+
 /* Стили для index.html */
 
 .list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
   font-style: normal;
 }
@@ -99,23 +118,33 @@ body {
 /* временно с фоном для наглядности */
 
 .hero {
+  margin-bottom: 94px;
   background-color: #2f303a;
+
+  text-align: center;
 }
 
 .hero-title {
-  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: var(--primary-white-color);
 
   font-weight: var(--hero-title-font-weight);
   font-size: var(--hero-font-size);
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  text-align: center;
 }
 
 /* Button */
 
 .hero-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
   color: var(--primary-white-color);
   background-color: var(--acccent-color);
 
@@ -124,6 +153,7 @@ body {
   font-size: var(--button-team-pproject-font-size);
   line-height: 1.87;
   letter-spacing: 0.06em;
+  text-align: center;
 }
 
 /* Sections */
@@ -133,6 +163,9 @@ body {
 }
 
 .feature-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-weight: var(--title-font-weight);
   line-height: 1.14;
   text-transform: uppercase;
@@ -140,9 +173,16 @@ body {
 
 .feature-list p,
 .team-list p {
+  margin-top: 0;
+  margin-bottom: 0px;
+
   font-weight: var(--primary-font-weight);
 }
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
 
   font-weight: var(--title-font-weight);
@@ -151,7 +191,16 @@ body {
   text-align: center;
 }
 
-.bground {
+.work-list img {
+  width: 370px;
+}
+
+.section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.bground-team {
   background-color: var(--secondary-bg-color);
 }
 
@@ -162,7 +211,21 @@ body {
 }
 
 .team-list .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: var(--secondary-font-weight);
+}
+
+.team-list li {
+  margin: 0;
+  padding-bottom: 30px;
+  background: var(--primary-white-color);
+  width: 270px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 
 /* Footer */
@@ -187,6 +250,11 @@ body {
 }
 
 footer {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 60px;
+  padding-bottom: 57px;
+
   background-color: #2f303a;
 }
 
@@ -206,6 +274,37 @@ footer {
 .project-button:focus {
   color: var(--primary-white-color);
   background-color: var(--acccent-color);
+
+  border-color: var(--acccent-color);
+}
+
+.project-button {
+  display: inline-block;
+  border-radius: 4px;
+  border: transparent;
+  padding: 6px 22px;
+
+  text-align: center;
+}
+
+.project-button.all {
+  min-width: 73px;
+}
+
+.project-button.web {
+  min-width: 128px;
+}
+
+.project-button.application {
+  min-width: 145px;
+}
+
+.project-button.design {
+  min-width: 103px;
+}
+
+.project-button.marketing {
+  min-width: 130px;
 }
 
 .project-list .title {
@@ -225,4 +324,11 @@ footer {
 
 .project-list a {
   text-decoration: none;
+}
+
+.project {
+  background-color: var(--primary-white-color);
+  border: 1px solid var(--border-project-color);
+  box-sizing: border-box;
+  width: 370px;
 }
