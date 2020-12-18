@@ -419,36 +419,13 @@ footer {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin: -15px;
 }
 
 .project-list > .project {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  /* padding-bottom: 20px; */
-
-  /* background: var(--primary-white-color); */
-  /* border: 1px solid var(--border-project-color); */
+  width: 370px;
+  margin: 15px;
 }
-
-.project-list > .project:nth-child(3n) {
-  margin-right: 0;
-}
-
-.project-list > .project:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-/* Альтернатива */
-
-/* .project:not(:nth-child(3n)) {
-  margin-right: 30px;
-} */
-
-/* .project:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-} */
 
 .project a {
   display: block;
